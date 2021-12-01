@@ -1,6 +1,6 @@
 var canvas = document.querySelector(".line");
 // Set display size (css pixels).
-var size = 377.95275591;
+var size = 188.97637795;
 canvas.style.width = size + "px";
 
 // Set actual size in memory (scaled to account for extra pixel density).

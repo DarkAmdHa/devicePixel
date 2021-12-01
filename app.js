@@ -1,17 +1,17 @@
-var canvas = document.querySelector(".line");
-// Set display size (css pixels).
-var size = 188.97637795;
-canvas.style.width = size + "px";
+let screenWidth = 0,
+  screenHeight = 0;
 
-// Set actual size in memory (scaled to account for extra pixel density).
-var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
-document.querySelector(".dRatio").innerText =
-  "Device Pixel Ratio: " + window.devicePixelRatio;
-canvas.style.width = Math.floor(size * scale) + "px";
-
-// Normalize coordinate system to use css pixels.
-
-var x = size / 2;
-var y = size / 2;
-
-var textString = "I love MDN";
+window.onload = function () {
+  fod.complete(function (data) {
+    screenWidth = data.device["screenmmwidth"];
+    screenHeight = data.device["screenmmheight"];
+  });
+};
+if (screenWidth != 0 && screenHeight != 0) {
+  document.querySelector(
+    ".screenWidth"
+  ).innerHTML = `<p>Found Width and Height</p> <p>Screen Width: ${screenWidth}</p> <p>Screen Height: ${screenHeight}</p>`;
+  const ratioW = (screenWidth * 3.77) / window.innerWidth;
+  const size = 377.95275591;
+  document.querySelector(".line").style.width = size * ratioW + "px";
+}

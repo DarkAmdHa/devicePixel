@@ -7,7 +7,7 @@ canvas.style.width = size + "px";
 var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
 document.querySelector(".dRatio").innerText =
   "Device Pixel Ratio: " + window.devicePixelRatio;
-canvas.style.width = Math.floor(size * scale) + "px";
+canvas.style.width = Math.floor(size / scale) + "px";
 
 // Normalize coordinate system to use css pixels.
 

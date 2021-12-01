@@ -6,12 +6,14 @@ window.onload = function () {
     screenWidth = data.device["screenmmwidth"];
     screenHeight = data.device["screenmmheight"];
     if (screenWidth != 0 && screenHeight != 0) {
-      document.querySelector(
-        ".screenWidth"
-      ).innerHTML = `<p>Found Width and Height</p> <p>Screen Width: ${screenWidth}</p> <p>Screen Height: ${screenHeight}</p>`;
+      document.querySelector("#accurate").style.display = "block";
       const ratioW = window.innerWidth / screenWidth;
-      const size = 50;
-      document.querySelector(".line").style.width = size * ratioW + "px";
+      const ratioH = window.innerHeight / screenHeight;
+      const size = 3;
+      document.querySelectorAll(".circle").forEach((circle) => {
+        circle.style.width = size * ratioW + "px";
+        circle.style.width = size * ratioH + "px";
+      });
     }
   });
 };

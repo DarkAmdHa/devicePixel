@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.line {
+  background-color: red;
+  height: 5px;
+}
+
+.dRatio {
+  font-size: 20px;
+  color: red;
+}

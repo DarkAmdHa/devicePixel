@@ -12,7 +12,7 @@ window.onload = function () {
       const size = 10;
       document.querySelectorAll(".circle").forEach((circle) => {
         circle.style.width = size * ratioW + "px";
-        circle.style.height = size * ratioH + "px";
+        circle.style.height = size * ratioW + "px";
       });
     }
   });

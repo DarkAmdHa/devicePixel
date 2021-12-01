@@ -9,8 +9,8 @@ window.onload = function () {
       document.querySelector(
         ".screenWidth"
       ).innerHTML = `<p>Found Width and Height</p> <p>Screen Width: ${screenWidth}</p> <p>Screen Height: ${screenHeight}</p>`;
-      const ratioW = (screenWidth * 3.77) / window.innerWidth;
-      const size = 377.95275591;
+      const ratioW = window.innerWidth / screenWidth;
+      const size = 5;
       document.querySelector(".line").style.width = size * ratioW + "px";
     }
   });
